@@ -9,7 +9,9 @@ namespace StoreInventorySystem.Models
     public class InventoryItem
     {
         //key
-        public int id { get; set; }
+        public int Id { get; set; }
+        public string OrderId { get; set; }
+
         //properties 
         [StringLength(30, MinimumLength = 2, ErrorMessage = "Title must contain 2 - 30 characters.")]
         public string ItemName { get; set; }

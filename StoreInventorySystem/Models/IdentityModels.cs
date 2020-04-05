@@ -20,9 +20,8 @@ namespace StoreInventorySystem.Models
         public string LastName { get; set; }
         [StringLength(25, MinimumLength = 4, ErrorMessage = "Display Name must contain 4 - 25 characters.")]
         public string DisplayName { get; set; }
-
         public string AvaterPath { get; set; }
-
+        //first and last name concatinated
         [NotMapped]
         public string FullName
         {

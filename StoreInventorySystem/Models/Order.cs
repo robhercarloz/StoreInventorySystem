@@ -8,7 +8,11 @@ namespace StoreInventorySystem.Models
 {
     public class Order
     {
+        //keys
         public int Id { get; set; }
+        public string CustomerId { get; set; }
+
+        //properties
         [StringLength(25, MinimumLength = 2, ErrorMessage = "Order Name must contain 2 - 25 characters.")]
         public string OrderName { get; set; }
         [StringLength(100, MinimumLength = 5, ErrorMessage = "Description must obtain 5 - 100 characters.")]
