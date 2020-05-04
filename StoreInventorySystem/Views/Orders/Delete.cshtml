@@ -1,0 +1,96 @@
+﻿@model StoreInventorySystem.Models.Order
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderOwner.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderOwner.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderPriority.PriorityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderPriority.PriorityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderStatus.OrderStatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderStatus.OrderStatusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDue)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

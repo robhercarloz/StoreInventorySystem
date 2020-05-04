@@ -1,0 +1,66 @@
+﻿@model StoreInventorySystem.Models.Purchase
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Purchase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Supplier.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supplier.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseCostAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseCostAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseCreated)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
